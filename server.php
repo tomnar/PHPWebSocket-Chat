@@ -18,7 +18,7 @@ function wsOnMessage($clientID, $message, $messageLength, $binary) {
 
 	//The speaker is the only person in the room. Don't let them feel lonely.
 	if ( sizeof($Server->wsClients) == 1 )
-		$Server->wsSend($clientID, "There isn't anyone else in the room, but I'll still listen to you. --Your Trusty Server");
+		$Server->wsSend($clientID, "There is Nooot anyone else in the room, but I will still listen to you. --Your Trusty Server");
 	else
 		//Send the message to everyone but the person who said it
 		foreach ( $Server->wsClients as $id => $client )
